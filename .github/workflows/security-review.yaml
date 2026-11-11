@@ -1,0 +1,10 @@
+name: AI Security Review
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security-review:
+    uses: .github/workflows/security-review.yml@v1
