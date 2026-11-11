@@ -66,3 +66,24 @@ jobs:
           name: security-review-report
           path: security-review-report.md
           if-no-files-found: ignore
+
+      - name: Enforce security review decision
+        if: always()
+        run: |
+          if [ ! -f security-review-report.md ]; then
+            echo "Security review report missing."
+            exit 1
+          fi
+
+          if grep -Fxq "SECURITY_REVIEW_STATUS: FAIL" security-review-report.md; then
+            echo "Security review FAILED. High or critical findings detected."
+            exit 1
+          fi
+
+          if grep -Fxq "SECURITY_REVIEW_STATUS: PASS" security-review-report.md; then
+            echo "Security review PASSED."
+            exit 0
+          fi
+
+          echo "No valid security review status found."
+          exit 1
