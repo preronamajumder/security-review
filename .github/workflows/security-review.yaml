@@ -1,8 +1,5 @@
 
----
 name: security-review
-description: Reviews pull request code for security vulnerabilities and reports severity, evidence, impact, and mitigations.
----
 
 on:
   workflow_call:
