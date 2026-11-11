@@ -1,6 +1,9 @@
-identify vulnerabilities and report findings, but don't modify files or attempt fixes. create an .md file for report. 
+---
+name: security-review
+description: Reviews pull request code for security vulnerabilities and reports severity, evidence, impact, and mitigations.
+---
 
-
+Identify vulnerabilities and report findings, but don't modify files or attempt fixes. create an .md file for report. 
 
 ## Final Security Decision
 
