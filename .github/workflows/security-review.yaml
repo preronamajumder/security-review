@@ -29,7 +29,7 @@ jobs:
       - name: Checkout trusted security skills
         uses: actions/checkout@v6
         with:
-          repository: YOUR-USERNAME/ai-security-skills
+          repository: preronamajumder/security-review
           ref: main
           path: trusted-skills
           persist-credentials: false
