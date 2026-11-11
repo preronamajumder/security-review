@@ -50,7 +50,7 @@ jobs:
         run: |
           set -o pipefail
 
-          copilot -p "/security-review" \
+          copilot -p "/security-review2" \
             --add-dir trusted-skills \
             --allow-tool='read,grep,glob,skill,shell(git diff:*)' \
             --deny-tool='write' \
